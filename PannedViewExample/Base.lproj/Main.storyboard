@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PannedViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCY-PX-xEc" customClass="PannedView" customModule="PannedViewExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="570.5" width="414" height="325.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mGR-I2-ecM">
+                                        <rect key="frame" x="8" y="8" width="398" height="275.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test panned view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owf-8A-kJc">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-OE-vYO">
+                                                <rect key="frame" x="0.0" y="32.5" width="398" height="203"/>
+                                                <string key="text">Winter, winter.
+Let’s go skate.
+Winter, winter.
+Don’t be late.
+Winter, winter.
+Let’s go roll.
+Winter, winter.
+In the snow.
+Winter, winter!
+Winter, winter!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khz-DU-KF2">
+                                                <rect key="frame" x="0.0" y="247.5" width="398" height="28"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Close">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="closeBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDl-9W-6JT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="d2h-kJ-bFa"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mGR-I2-ecM" firstAttribute="trailing" secondItem="d2h-kJ-bFa" secondAttribute="trailing" constant="-8" id="fSY-5B-4KG"/>
+                                    <constraint firstItem="d2h-kJ-bFa" firstAttribute="bottom" secondItem="mGR-I2-ecM" secondAttribute="bottom" constant="8" id="lVl-o5-7yr"/>
+                                    <constraint firstItem="mGR-I2-ecM" firstAttribute="leading" secondItem="d2h-kJ-bFa" secondAttribute="leading" constant="8" id="rTd-0U-DkD"/>
+                                    <constraint firstItem="mGR-I2-ecM" firstAttribute="top" secondItem="d2h-kJ-bFa" secondAttribute="top" constant="8" id="thf-dC-50y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KCY-PX-xEc" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="4Tl-Z4-O0N"/>
+                            <constraint firstItem="KCY-PX-xEc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fG9-s1-n7X"/>
+                            <constraint firstItem="KCY-PX-xEc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o6o-KJ-WSK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pannedView" destination="KCY-PX-xEc" id="Zdb-pL-m7r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
